@@ -8,7 +8,6 @@
     Title="ProyectoP3">
 
     <TabBar>
-        <!-- Pagina Principal -->
         <Tab Title="Pagina Principal">
             <ShellContent 
                 Title="Pagina principal" 
@@ -23,7 +22,6 @@
                  Route="ListaAuto"/>
         </Tab>
 
-        <!-- Registrar Usuario -->
         <Tab Title="Registrar Usuario">
             <ShellContent 
                 Title="Registrar Usuario" 
@@ -31,7 +29,6 @@
                 Route="RegisterUserPage"/>
         </Tab>
 
-        <!-- Registrar Auto -->
         <Tab Title="Registrar Auto">
             <ShellContent 
                 Title="Registrar Auto" 
@@ -39,7 +36,6 @@
                 Route="RegisterCarPage"/>
         </Tab>
 
-        <!-- Realizar Transacción -->
         <Tab Title="Realizar Transacción">
             <ShellContent 
                 Title="Realizar Transacción" 

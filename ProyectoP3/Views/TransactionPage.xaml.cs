@@ -7,7 +7,7 @@ public partial class TransactionPage : ContentPage
 	public TransactionPage()
 	{
 		InitializeComponent();
-        BindingContext = new TransactionViewModel();  // Asociar el ViewModel
+        BindingContext = new TransactionViewModel();
 
     }
 }

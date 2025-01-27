@@ -1,9 +1,6 @@
 ﻿using ProyectoP3.Models;
 using SQLite;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoP3.Services
@@ -18,6 +15,7 @@ namespace ProyectoP3.Services
 
             _database.CreateTableAsync<Usuario>().Wait();
             _database.CreateTableAsync<Auto>().Wait();
+            _database.CreateTableAsync<Transaction>().Wait();
         }
 
         public Task<List<Usuario>> GetVendedoresAsync()
@@ -38,7 +36,6 @@ namespace ProyectoP3.Services
             return _database.DeleteAsync(vendedor);
         }
 
-        // Métodos para Autos
         public Task<List<Auto>> GetAutosAsync()
         {
             return _database.Table<Auto>().ToListAsync();
@@ -55,6 +52,16 @@ namespace ProyectoP3.Services
         public Task<int> DeleteAutoAsync(Auto auto)
         {
             return _database.DeleteAsync(auto);
+        }
+
+        public Task<List<Transaction>> GetTransactionsAsync()
+        {
+            return _database.Table<Transaction>().ToListAsync();
+        }
+
+        public Task<int> SaveTransactionAsync(Transaction transaction)
+        {
+            return _database.InsertAsync(transaction);
         }
     }
 }

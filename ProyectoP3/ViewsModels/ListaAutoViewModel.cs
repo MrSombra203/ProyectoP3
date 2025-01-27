@@ -28,7 +28,6 @@ namespace ProyectoP3.ViewModels
             }
             catch (Exception ex)
             {
-                // Mostrar un error si ocurre un problema al cargar los datos
                 await App.Current.MainPage.DisplayAlert("Error", $"Error al cargar los autos: {ex.Message}", "OK");
             }
         }

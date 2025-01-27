@@ -34,7 +34,7 @@ namespace ProyectoP3.ViewModels
                 Precio = this.Precio
             };
 
-            await _databaseService.SaveAutoAsync(auto); // Aquí se guarda el auto en la base de datos
+            await _databaseService.SaveAutoAsync(auto);
             await App.Current.MainPage.DisplayAlert("Éxito", "Auto registrado correctamente.", "OK");
         }
 

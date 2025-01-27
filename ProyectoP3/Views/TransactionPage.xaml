@@ -9,15 +9,16 @@
         <Picker ItemsSource="{Binding Usuarios}" 
                 ItemDisplayBinding="{Binding Nombre}" 
                 SelectedItem="{Binding UsuarioSeleccionado}" />
+        <Label Text="{Binding UsuarioSeleccionado.IdUsuario, StringFormat='ID: {0}'}" FontSize="Small" />
 
         <Label Text="Selecciona el Auto" FontSize="Medium" />
         <Picker ItemsSource="{Binding Autos}" 
                 ItemDisplayBinding="{Binding Modelo}" 
                 SelectedItem="{Binding AutoSeleccionado}" />
+        <Label Text="{Binding AutoSeleccionado.IdAuto, StringFormat='ID: {0}'}" FontSize="Small" />
 
         <Button Text="Realizar Transacción"
-            Command="{Binding RealizarTransaccionCommand}" />
-
+                Command="{Binding RealizarTransaccionCommand}" />
     </StackLayout>
 
 </ContentPage>

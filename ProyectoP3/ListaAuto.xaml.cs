@@ -5,7 +5,7 @@ namespace ProyectoP3
         public ListaAuto()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.ListaAutoViewModel(App.Database); // Aquí inyectamos el servicio de base de datos
+            BindingContext = new ViewModels.ListaAutoViewModel(App.Database); 
         }
     }
 }

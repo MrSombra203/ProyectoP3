@@ -7,7 +7,7 @@ public partial class RegisterUserPage : ContentPage
 	public RegisterUserPage()
 	{
 		InitializeComponent();
-        BindingContext = new RegisterUserViewModel();  // Asociar el ViewModel
+        BindingContext = new RegisterUserViewModel();
 
     }
 }
