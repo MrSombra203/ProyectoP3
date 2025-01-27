@@ -66,12 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\RegisterCarPage.xaml.cs">
-	    <DependentUpon>RegisterCarPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
+	  <MauiXaml Update="ListaAuto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RegisterCarPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

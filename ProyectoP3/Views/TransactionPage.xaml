@@ -16,7 +16,8 @@
                 SelectedItem="{Binding AutoSeleccionado}" />
 
         <Button Text="Realizar Transacción"
-                Command="{Binding RealizarTransaccionCommand}" />
+            Command="{Binding RealizarTransaccionCommand}" />
+
     </StackLayout>
 
 </ContentPage>

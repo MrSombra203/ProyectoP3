@@ -4,11 +4,48 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ProyectoP3"
-    Shell.FlyoutBehavior="Flyout"
+    xmlns:views="clr-namespace:ProyectoP3.Views"
     Title="ProyectoP3">
 
-    <ShellContent Title="Registrar Usuario" ContentTemplate="{DataTemplate views:RegisterUserPage}" />
-    <ShellContent Title="Registrar Auto" ContentTemplate="{DataTemplate views:RegisterCarPage}" />
-    <ShellContent Title="Realizar Transacción" ContentTemplate="{DataTemplate views:TransactionPage}" />
-</Shell>
+    <TabBar>
+        <!-- Pagina Principal -->
+        <Tab Title="Pagina Principal">
+            <ShellContent 
+                Title="Pagina principal" 
+                ContentTemplate="{DataTemplate local:MainPage}" 
+                Route="MainPage"/>
+        </Tab>
 
+        <Tab Title="Lista de Autos">
+            <ShellContent
+                 Title="Lista de Autos"
+                 ContentTemplate="{DataTemplate local:ListaAuto}"
+                 Route="ListaAuto"/>
+        </Tab>
+
+        <!-- Registrar Usuario -->
+        <Tab Title="Registrar Usuario">
+            <ShellContent 
+                Title="Registrar Usuario" 
+                ContentTemplate="{DataTemplate views:RegisterUserPage}" 
+                Route="RegisterUserPage"/>
+        </Tab>
+
+        <!-- Registrar Auto -->
+        <Tab Title="Registrar Auto">
+            <ShellContent 
+                Title="Registrar Auto" 
+                ContentTemplate="{DataTemplate views:RegisterCarPage}" 
+                Route="RegisterCarPage"/>
+        </Tab>
+
+        <!-- Realizar Transacción -->
+        <Tab Title="Realizar Transacción">
+            <ShellContent 
+                Title="Realizar Transacción" 
+                ContentTemplate="{DataTemplate views:TransactionPage}" 
+                Route="TransactionPage"/>
+        </Tab>
+    </TabBar>
+    <ShellContent Title="Lista de Autos" ContentTemplate="{DataTemplate local:ListaAuto}" Route="ListaAuto" />
+</Shell>

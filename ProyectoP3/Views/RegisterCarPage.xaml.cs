@@ -1,9 +1,12 @@
 namespace ProyectoP3.Views;
+using ProyectoP3.ViewModels;
 
-public partial class NewPage1 : ContentPage
+public partial class RegisterCarPage : ContentPage
 {
-	public NewPage1()
+	public RegisterCarPage()
 	{
 		InitializeComponent();
-	}
+        BindingContext = new RegisterCarViewModel(App.Database);  // Asociar el ViewModel
+
+    }
 }

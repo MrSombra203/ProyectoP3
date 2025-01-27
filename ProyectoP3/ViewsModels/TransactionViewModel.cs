@@ -19,8 +19,15 @@ namespace ProyectoP3.ViewModels
 
         private async void CargarDatos()
         {
-            Usuarios = new ObservableCollection<Models.Usuario>(await App.Database.GetVendedoresAsync());
-            Autos = new ObservableCollection<Models.Auto>(await App.Database.GetAutosAsync()); // Deberás implementar este método.
+            try
+            {
+                Usuarios = new ObservableCollection<Models.Usuario>(await App.Database.GetVendedoresAsync());
+                Autos = new ObservableCollection<Models.Auto>(await App.Database.GetAutosAsync());
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", $"Error al cargar datos: {ex.Message}", "OK");
+            }
         }
 
         private async void RealizarTransaccion()
@@ -31,8 +38,9 @@ namespace ProyectoP3.ViewModels
                 return;
             }
 
-            // Implementa la lógica de la transacción aquí.
+            // Implementa la lógica de la transacción aquí
             await App.Current.MainPage.DisplayAlert("Éxito", "Transacción realizada correctamente.", "OK");
         }
+
     }
 }

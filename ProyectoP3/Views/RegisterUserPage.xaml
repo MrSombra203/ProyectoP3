@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP3.Views.RegisterUserPage"
              Title="RegisterUserPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Nombre" FontSize="Medium" />
+        <Entry Placeholder="Ingresa tu nombre" Text="{Binding Nombre}" />
+
+        <Label Text="Correo Electrónico" FontSize="Medium" />
+        <Entry Placeholder="Ingresa tu correo" Text="{Binding Correo}" Keyboard="Email" />
+
+        <Label Text="Fecha de Nacimiento" FontSize="Medium" />
+        <DatePicker Date="{Binding FechaNacimiento}" />
+
+        <Button Text="Registrar Usuario"
+            Command="{Binding RegistrarVendedorCommand}" />
+
+    </StackLayout>
+
 </ContentPage>

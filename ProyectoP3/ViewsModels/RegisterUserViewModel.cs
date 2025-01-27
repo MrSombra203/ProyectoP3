@@ -25,7 +25,7 @@ namespace ProyectoP3.ViewModels
                 FechaNacimiento = this.FechaNacimiento
             };
 
-            await App.Database.SaveVendedorAsync(usuario);
+            await App.Database.SaveVendedorAsync(usuario); // Guardamos el usuario en la base de datos
             await App.Current.MainPage.DisplayAlert("Éxito", "Usuario registrado correctamente.", "OK");
         }
     }
