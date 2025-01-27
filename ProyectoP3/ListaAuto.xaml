@@ -5,10 +5,7 @@
              x:Class="ProyectoP3.ListaAuto"
              Title="Lista de Autos">
 
-    <ContentPage.BindingContext>
-        <viewModels:ListaAutoViewModel/>
-    </ContentPage.BindingContext>
-
+    
     <VerticalStackLayout>
         <Label 
             Text="Lista de Autos"

@@ -16,12 +16,10 @@ namespace ProyectoP3.Services
         {
             _database = new SQLiteAsyncConnection(dbPath);
 
-            // Crear tablas para Usuario y Auto
             _database.CreateTableAsync<Usuario>().Wait();
             _database.CreateTableAsync<Auto>().Wait();
         }
 
-        // Métodos para Usuarios
         public Task<List<Usuario>> GetVendedoresAsync()
         {
             return _database.Table<Usuario>().ToListAsync();

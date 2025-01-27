@@ -4,6 +4,7 @@
              x:Class="ProyectoP3.Views.RegisterUserPage"
              Title="RegisterUserPage">
 
+
     <StackLayout Padding="20" Spacing="15">
         <Label Text="Nombre" FontSize="Medium" />
         <Entry Placeholder="Ingresa tu nombre" Text="{Binding Nombre}" />

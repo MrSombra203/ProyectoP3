@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoP3.Views.RegisterCarPage"
              Title="RegisterCarPage">
+    
 
     <StackLayout Padding="20" Spacing="15">
         <Label Text="Marca" FontSize="Medium" />
