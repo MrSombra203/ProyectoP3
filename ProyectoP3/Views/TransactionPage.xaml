@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.TransactionPage"
+             Title="TransactionPage">
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Selecciona el Comprador" FontSize="Medium" />
+        <Picker ItemsSource="{Binding Usuarios}" 
+                ItemDisplayBinding="{Binding Nombre}" 
+                SelectedItem="{Binding UsuarioSeleccionado}" />
+
+        <Label Text="Selecciona el Auto" FontSize="Medium" />
+        <Picker ItemsSource="{Binding Autos}" 
+                ItemDisplayBinding="{Binding Modelo}" 
+                SelectedItem="{Binding AutoSeleccionado}" />
+
+        <Button Text="Realizar Transacción"
+                Command="{Binding RealizarTransaccionCommand}" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProyectoP3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProyectoP3"
+    Shell.FlyoutBehavior="Flyout"
+    Title="ProyectoP3">
+
+    <ShellContent Title="Registrar Usuario" ContentTemplate="{DataTemplate views:RegisterUserPage}" />
+    <ShellContent Title="Registrar Auto" ContentTemplate="{DataTemplate views:RegisterCarPage}" />
+    <ShellContent Title="Realizar Transacción" ContentTemplate="{DataTemplate views:TransactionPage}" />
+</Shell>
+
